@@ -18,7 +18,7 @@ function App() {
 
   
  useEffect(() => {
-  fetch('./status.json')
+  fetch(`./status.json?v=${Date.now()}`) // Adiciona um timestamp para cache-busting
     .then(resp => resp.json())
     .then(data => {
       setGoalAmount(data.meta)
