@@ -14,7 +14,7 @@ function App() {
   
   const pixKey = "22981526104" // Chave PIX - Banco Inter
   const goalAmount = 11450
-  const currentAmount = 0 // Valor atual arrecadado
+  const currentAmount = 563 // Valor atual arrecadado
   
   useEffect(() => {
     const progressPercentage = (currentAmount / goalAmount) * 100
