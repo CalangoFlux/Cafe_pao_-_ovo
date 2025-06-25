@@ -232,8 +232,7 @@ function App() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600">
-                      Participação no programa científico estadual "Mulheres na Ciência" 
-                      e estudos complementares em programação, idiomas e economia.
+                       Continuidade da participação no programa científico estadual recém-iniciado 'mulheres na ciência', para jovens estudantes da rede pública. Iara é aluna acima da média com excelentes notas e rendimento escolar, além de cursar em paralelo programação fullstack (DevQuest+Dev em Dobro-online), onde segue se desenvolvendo muito bem. Soma tbm aos estudos em Inglês, Espanhol e Economia (na Marginal Revolution University, online). Todos os estudos complementares são de iniciativa empoderada dela mesma.
                     </p>
                   </CardContent>
                 </Card>
