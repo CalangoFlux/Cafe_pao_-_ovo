@@ -13,13 +13,24 @@ function App() {
   const [progress, setProgress] = useState(0)
   
   const pixKey = "22981526104" // Chave PIX - Banco Inter
-  const goalAmount = 11450
-  const currentAmount = 563 // Valor atual arrecadado
+  const [goalAmount, setGoalAmount] = useState(0)
+  const [currentAmount, setCurrentAmount] = useState(0)
+
   
-  useEffect(() => {
-    const progressPercentage = (currentAmount / goalAmount) * 100
-    setProgress(progressPercentage)
-  }, [currentAmount, goalAmount])
+ useEffect(() => {
+  fetch('./status.json')
+    .then(resp => resp.json())
+    .then(data => {
+      setGoalAmount(data.meta)
+      setCurrentAmount(data.arrecadado)
+      const progressPercentage = (data.arrecadado / data.meta) * 100
+      setProgress(progressPercentage)
+    })
+    .catch(err => {
+      console.error("Erro ao carregar status.json:", err)
+    })
+}, [])
+
 
   const copyPixKey = () => {
     navigator.clipboard.writeText(pixKey)
